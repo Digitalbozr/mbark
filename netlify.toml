@@ -1,0 +1,18 @@
+[build]
+  publish = "public"
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/api/links"
+  to = "/.netlify/functions/links"
+  status = 200
+
+[[redirects]]
+  from = "/api/links/*"
+  to = "/.netlify/functions/links"
+  status = 200
+
+[[redirects]]
+  from = "/go/*"
+  to = "/.netlify/functions/go/:splat"
+  status = 200
