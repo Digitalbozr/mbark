@@ -1,7 +1,8 @@
 {
   "version": 2,
   "rewrites": [
+    { "source": "/", "destination": "/admin.html" },
     { "source": "/admin", "destination": "/admin.html" },
-    { "source": "/go/:code", "destination": "/api/go/:code" }
+    { "source": "/go/:code", "destination": "/api/go?code=:code" }
   ]
 }

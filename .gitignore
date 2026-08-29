@@ -1,3 +1,20 @@
 node_modules/
 .env
 *.log
+
+# Firebase credentials
+serviceAccountKey.json
+*.pem
+*.key
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+

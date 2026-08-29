@@ -1,9 +1,9 @@
 const fs = require('fs/promises');
 const path = require('path');
-const { readLinks, writeLinks } = require('../../lib/links-store');
+const { readLinks, writeLinks } = require('../lib/links-store');
 
 module.exports = async function handler(req, res) {
-  const code = req.query.code;
+  const code = Array.isArray(req.query.code) ? req.query.code[0] : req.query.code;
   if (typeof code !== 'string' || !/^[A-Za-z0-9_-]{6}$/.test(code)) return res.status(404).send('Link not found.');
 
   try {
