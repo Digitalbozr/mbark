@@ -2,7 +2,7 @@ const fs = require('fs/promises');
 const path = require('path');
 const crypto = require('crypto');
 
-const linksFile = path.join(process.cwd(), 'links.json');
+const linksFile = path.join(process.cwd(), 'data', 'links.json');
 
 async function readLinks() {
   const contents = await fs.readFile(linksFile, 'utf8');
